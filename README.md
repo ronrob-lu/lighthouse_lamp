@@ -41,7 +41,8 @@ The lighthouse lamp is crafted with the following recipe (yields 2 lamps):
 │ Stone        │ Stone │ Stone      │
 └─────────────────────────────────┘
 ```
-[craft a lighthouse lamp](craft_lighthouse_lamp.png)
+![craft a lighthouse lamp](craft_lighthouse_lamp.png)
+
 **Materials needed:**
 - 2× Mese Block
 - 2× Torch
