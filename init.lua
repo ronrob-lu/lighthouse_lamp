@@ -1,6 +1,12 @@
 -- Lighthouse Lamp Mod v0.1.0 - Night-Only Rotating Beam
 local mod_name = "lighthouse_lamp"
 
+-- Dynamic groups compatibility
+local groups = {cracky=3, oddly_breakable_by_hand=3}
+if minetest.get_modpath("mcl_core") then
+    groups = {pickaxey=1, cracky=3}
+end
+
 minetest.register_node(mod_name .. ":lamp", {
     description = "Lighthouse Lamp",
     drawtype = "normal",
@@ -13,7 +19,7 @@ minetest.register_node(mod_name .. ":lamp", {
         "default_mese_block.png^[multiply:#ffdd00"
     },
     paramtype2 = "facedir",
-    groups = {cracky=3, oddly_breakable_by_hand=3},
+    groups = groups,
     light_source = 14,
     drop = mod_name .. ":lamp",
 
@@ -64,11 +70,46 @@ minetest.register_node(mod_name .. ":lamp", {
     end,
 })
 
-minetest.register_craft({
-    output = mod_name .. ":lamp 2",
-    recipe = {
-        {"default:mese_block", "default:torch", "default:mese_block"},
-        {"default:glass", "default:torch", "default:glass"},
-        {"default:stone", "default:stone", "default:stone"},
-    }
-})
+-- Crafting Recipes
+if minetest.get_modpath("default") then
+    -- Recipe using Mese Crystals (cheaper than block)
+    minetest.register_craft({
+        output = mod_name .. ":lamp 2",
+        recipe = {
+            {"default:mese_crystal", "default:torch", "default:mese_crystal"},
+            {"default:glass",        "default:torch", "default:glass"},
+            {"default:stone",        "default:stone", "default:stone"},
+        }
+    })
+    -- Alternative recipe using Gold Ingots (no Mese required at all)
+    minetest.register_craft({
+        output = mod_name .. ":lamp 2",
+        recipe = {
+            {"default:gold_ingot", "default:torch", "default:gold_ingot"},
+            {"default:glass",      "default:torch", "default:glass"},
+            {"default:stone",      "default:stone", "default:stone"},
+        }
+    })
+elseif minetest.get_modpath("mcl_core") then
+    local torch = minetest.get_modpath("mcl_torches") and "mcl_torches:torch" or "mcl_core:torch"
+    local glowstone = minetest.get_modpath("mcl_nether") and "mcl_nether:glowstone" or "mcl_core:glowstone"
+    
+    -- Recipe using Glowstone
+    minetest.register_craft({
+        output = mod_name .. ":lamp 2",
+        recipe = {
+            {glowstone,        torch,             glowstone},
+            {"mcl_core:glass", torch,             "mcl_core:glass"},
+            {"mcl_core:stone", "mcl_core:stone",  "mcl_core:stone"},
+        }
+    })
+    -- Alternative recipe using Gold Ingots
+    minetest.register_craft({
+        output = mod_name .. ":lamp 2",
+        recipe = {
+            {"mcl_core:gold_ingot", torch,             "mcl_core:gold_ingot"},
+            {"mcl_core:glass",      torch,             "mcl_core:glass"},
+            {"mcl_core:stone",      "mcl_core:stone",  "mcl_core:stone"},
+        }
+    })
+end
