@@ -1,93 +1,62 @@
-# Lighthouse Lamp Mod
+# ⚓ Lighthouse Lamp: Illuminate the Night Sky!
 
-A Luanti (Minetest) mod that adds a rotating lighthouse lamp with a dynamic particle beam effect that only activates at night.
+Bring your coastlines, harbors, and mountaintops to life with the **Lighthouse Lamp** mod for Luanti (Minetest)! 
 
-## Features
+This mod adds a powerful, high-performance lighthouse beacon that casts a beautiful, rotating light beam across the landscape all night long. It's the perfect functional decoration for any maritime build or mountain outpost.
 
-- **Night-Only Activation**: The rotating beam effect only activates during nighttime (between sunset and sunrise), saving performance during the day.
-- **Rotating Particle Beam**: Spawns glowing yellow particles that rotate continuously, creating a realistic lighthouse beam effect.
-- **High Light Source**: Emits light level 14 for excellent illumination.
-- **Simple Crafting**: Easy-to-craft recipe using common materials.
+---
 
-## Requirements
+## ⚡ Key Features
 
-- Luanti/Minetest version 5.0.0 or higher
-- Default game (for `default:mese_block`, `default:torch`, `default:glass`, `default:stone`)
+* **💫 Sweeping Night Beacon:** As soon as dusk falls, the lamp projects a stunning, rotating beam of particles that rotates 360 degrees to scan the sea.
+* **☀️ Automatic Day/Night Cycle:** The rotating beam automatically stops at sunrise and wakes up again at sunset, behaving exactly like a real lighthouse.
+* **🌟 Maximum Light Emission:** Emits a bright level-14 light source to keep your port safe, bright, and free of hostile mobs.
+* **🛠️ Highly Craftable:** Multiple recipes using gold, Mese, or glowstone, making it highly accessible in survival gameplay.
+* **📦 Clean & Performance-Friendly:** Built to look gorgeous while remaining extremely lightweight on server performance.
 
-## Installation
+---
 
-1. Download or clone this mod into your mods directory:
-   ```
-   <your_minetest_dir>/mods/lighthouse_lamp/
-   ```
+## 🛠️ Crafting Recipes
 
-2. Enable the mod in your world's `world.mt` file or through the mod configuration menu:
-   ```
-   load_mod_lighthouse_lamp = true
-   ```
+Crafting a Lighthouse Lamp is easy and supports multiple materials:
 
-3. Start or restart your world.
+### Minetest Game (MTG) Recipes
 
-## Usage
-
-### Crafting Recipe
-
-The lighthouse lamp is crafted with the following recipe (yields 2 lamps):
-
+**Option A (Mese crystals):**
+```text
+[Mese Crystal]  [Torch]  [Mese Crystal]
+[Glass]         [Torch]  [Glass]
+[Stone]         [Stone]  [Stone]
 ```
-┌─────────────────────────────────┐
-│ Mese Block   │ Torch │ Mese Block │
-│ Glass        │ Torch │ Glass      │
-│ Stone        │ Stone │ Stone      │
-└─────────────────────────────────┘
+
+**Option B (Gold Ingots):**
+```text
+[Gold Ingot]  [Torch]  [Gold Ingot]
+[Glass]       [Torch]  [Glass]
+[Stone]       [Stone]  [Stone]
 ```
-![craft a lighthouse lamp](craft_lighthouse_lamp.png)
 
-**Materials needed:**
-- 2× Mese Block
-- 2× Torch
-- 2× Glass
-- 3× Stone
+---
 
-### Placing the Lamp
+### MineClone2 / VoxeLibre Recipes
 
-1. Place the lamp block in your desired location.
-2. The lamp will automatically start its timer upon placement.
-3. During nighttime, the lamp will emit a rotating beam of light particles.
-4. The beam rotates continuously, completing a full 360° sweep.
+**Option A (Glowstone):**
+```text
+[Glowstone]    [Torch]  [Glowstone]
+[Glass Block]  [Torch]  [Glass Block]
+[Stone]        [Stone]  [Stone]
+```
 
-## Technical Details
+**Option B (Gold Ingots):**
+```text
+[Gold Ingot]   [Torch]  [Gold Ingot]
+[Glass Block]  [Torch]  [Glass Block]
+[Stone]        [Stone]  [Stone]
+```
 
-- **Node Name**: `lighthouse_lamp:lamp`
-- **Light Level**: 14
-- **Rotation Speed**: 5 degrees per timer tick (adjustable in code)
-- **Particle Properties**:
-  - Amount: 50 particles per spawn
-  - Lifetime: 3-5 seconds
-  - Size: 15-20 units
-  - Velocity: 80-120 units/second in the direction of rotation
-  - Texture: Glowing yellow mese block texture
+---
 
-## Configuration
-
-To modify the behavior of the lamp, edit the `init.lua` file:
-
-- **Rotation Speed**: Change the value `angle = angle + 5` to increase or decrease rotation speed.
-- **Particle Amount**: Adjust `amount = 50` to change particle density.
-- **Beam Length**: Modify the velocity values (`minvel` and `maxvel`) to extend or shorten the beam.
-- **Night Time Range**: Edit the `is_night` condition to customize when the beam activates.
-
-## License
-
-This mod is provided as-is. Feel free to modify and distribute as needed.
-
-## Version History
-
-- **v0.1.0** (Initial Release)
-  - Added lighthouse lamp node
-  - Implemented night-only particle beam effect
-  - Added crafting recipe
-
-## Author
-
-ronrob-lu
+## 🎮 How to Use
+1. **Craft** the Lighthouse Lamp using one of the recipes above.
+2. **Place** the lamp on your lighthouse tower, dock, or peak.
+3. Watch as night falls and the lamp automatically starts its sweeping, rotating beacon!
