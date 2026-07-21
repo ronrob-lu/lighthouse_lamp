@@ -16,43 +16,61 @@ This mod adds a powerful, high-performance lighthouse beacon that casts a beauti
 
 ---
 
-## 🛠️ Crafting Recipes
+## 🛠️ Crafting Recipes / Recetas de crafteo
 
-Crafting a Lighthouse Lamp is easy and supports multiple materials:
+Crafting Lighthouse Lamps is easy and supports multiple materials (each recipe yields **2 lamps** / cada receta produce **2 lámparas**).
 
-### Minetest Game (MTG) Recipes
+---
 
-**Option A (Mese crystals):**
+### Minetest Game (MTG) Recipes / Recetas de Minetest Game
+
+**Option A (Mese Blocks / Bloques de Mese) - Yields 2:**
 ```text
-[Mese Crystal]  [Torch]  [Mese Crystal]
-[Glass]         [Torch]  [Glass]
-[Stone]         [Stone]  [Stone]
+[Mese Block]  [Torch]  [Mese Block]
+[Glass]       [Torch]  [Glass]
+[Stone]       [Stone]  [Stone]
 ```
+![Crafting with Mese (Minetest)](screenshots/craft-with-mese-minetest.png)
 
-**Option B (Gold Ingots):**
+**Option B (Gold Ingots / Lingotes de Oro) - Yields 2:**
 ```text
 [Gold Ingot]  [Torch]  [Gold Ingot]
 [Glass]       [Torch]  [Glass]
 [Stone]       [Stone]  [Stone]
 ```
+![Crafting with Gold (Minetest)](screenshots/craft-with-gold-minetest.png)
 
 ---
 
-### MineClone2 / VoxeLibre Recipes
+### MineClone2 / VoxeLibre Recipes / Recetas de VoxeLibre
 
-**Option A (Glowstone):**
+**Option A (Glowstone / Piedra Luminosa) - Yields 2:**
 ```text
 [Glowstone]    [Torch]  [Glowstone]
 [Glass Block]  [Torch]  [Glass Block]
 [Stone]        [Stone]  [Stone]
 ```
 
-**Option B (Gold Ingots):**
+**Option B (Gold Ingots / Lingotes de Oro) - Yields 2:**
 ```text
 [Gold Ingot]   [Torch]  [Gold Ingot]
 [Glass Block]  [Torch]  [Glass Block]
 [Stone]        [Stone]  [Stone]
 ```
+![Crafting with Gold (VoxeLibre)](screenshots/craft-with-gold-voxelibre.png)
+
+---
+
+### 🌐 Translation Guide / Guía de Traducción de Ítems
+
+If your game language is set to Spanish (*español*), here is how to identify and obtain the required crafting blocks:
+
+*   **Mese Block** ➡️ **Bloque de Mese**
+*   **Glowstone** ➡️ **Piedra luminosa** (found in the Nether / *el Inframundo*).
+*   **Gold Ingot** ➡️ **Lingote de oro** (smelt Gold Ore / *mineral de oro*).
+*   **Glass / Glass Block** ➡️ **Cristal** (smelt Sand / *arena* in a furnace).
+*   **Stone / Stone Block** ➡️ **Piedra** (smelt Cobblestone / *adoquín* in a furnace).
+*   **Torch** ➡️ **Antorcha** (craft with Coal / *carbón* and Stick / *palo*).
 
 ---
 

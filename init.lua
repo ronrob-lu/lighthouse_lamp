@@ -72,13 +72,13 @@ minetest.register_node(mod_name .. ":lamp", {
 
 -- Crafting Recipes
 if minetest.get_modpath("default") then
-    -- Recipe using Mese Crystals (cheaper than block)
+    -- Recipe using Mese Blocks
     minetest.register_craft({
         output = mod_name .. ":lamp 2",
         recipe = {
-            {"default:mese_crystal", "default:torch", "default:mese_crystal"},
-            {"default:glass",        "default:torch", "default:glass"},
-            {"default:stone",        "default:stone", "default:stone"},
+            {"default:mese",  "default:torch", "default:mese"},
+            {"default:glass", "default:torch", "default:glass"},
+            {"default:stone", "default:stone", "default:stone"},
         }
     })
     -- Alternative recipe using Gold Ingots (no Mese required at all)
